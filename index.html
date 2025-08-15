@@ -9,6 +9,92 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles for booking section */
+        .booking-section {
+            background: #f8f9fa;
+            padding: 40px 0;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .booking-options {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .booking-method {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .booking-alternative {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #20c157;
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .quick-contact {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .quick-contact p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        
+        .quick-contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .emergency-booking {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            color: #856404;
+        }
+        
+        @media (max-width: 768px) {
+            .booking-options {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -28,7 +114,7 @@
                     </ul>
                 </nav>
                 <div class="header__actions">
-                    <a href="tel:+91 8999626067" class="header__phone">
+                    <a href="tel:+918999626067" class="header__phone">
                         <i class="fas fa-phone"></i>
                         <span>+91 8999626067</span>
                     </a>
@@ -42,7 +128,7 @@
             </div>
         </div>
     </header>
-
+    
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -75,7 +161,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
@@ -101,7 +187,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
@@ -174,7 +260,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Why Choose Us Section -->
     <section class="why-choose-us">
         <div class="container">
@@ -206,7 +292,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Office Gallery -->
     <section class="office-gallery">
         <div class="container">
@@ -239,7 +325,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
@@ -335,94 +421,68 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
+    
+    <!-- Contact & Booking Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Visit Us Today</h2>
-                <p>Schedule your appointment or get in touch with us</p>
+                <h2>Book Your Appointment</h2>
+                <p>Choose your preferred way to schedule with Dr. Shema</p>
             </div>
-            <div class="contact__content">
-                <div class="contact__info">
-                    <div class="contact__item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Our Location</h4>
-                            <p>Shop No. 10, Nadkar Complex, D- Wing, Nasheman Colony, Greenfield Housing Society, Kausa, Mumbra, Thane, Maharashtra 400612</p>
-                        </div>
+            
+            <!-- Booking Options -->
+            <div class="booking-section">
+                <div class="booking-options">
+                    <!-- Calendly Booking -->
+                    <div class="booking-method">
+                        <h3>📅 Schedule Online</h3>
+                        <p>See available time slots and book instantly</p>
+                        
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/muskandentalclinic4u" style="min-width:320px;height:700px;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
                     </div>
-                    <div class="contact__item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+91 8999626067">+91 8999626067</a></p>
+                    
+                    <!-- WhatsApp & Quick Contact -->
+                    <div class="booking-alternative">
+                        <h3>📱 Quick Booking Options</h3>
+                        <p>For urgent appointments or quick questions</p>
+                        
+                        <a href="https://wa.me/918999626067?text=Hello%20Dr.%20Shema!%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20Muskan%20Dental%20Clinic.%20Please%20let%20me%20know%20available%20time%20slots." 
+                           class="whatsapp-btn" target="_blank">
+                            📱 Book via WhatsApp
+                        </a>
+                        
+                        <div class="quick-contact">
+                            <p><strong>📞 Call:</strong> <a href="tel:+918999626067">+91 8999626067</a></p>
+                            <p><strong>📧 Email:</strong> <a href="mailto:muskandentalclinic4u@gmail.com">muskandentalclinic4u@gmail.com</a></p>
+                            <p><strong>📍 Address:</strong><br>Shop No. 10, Nadkar Complex, D-Wing,<br>Nasheman Colony, Greenfield Housing Society,<br>Kausa, Mumbra, Thane, Maharashtra 400612</p>
                         </div>
-                    </div>
-                    <div class="contact__item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:muskandentalclinic4u@gmail.com">muskandentalclinic4u@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact__item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Opening Hours</h4>
-                            <div class="hours">
-                                <p><span>Monday - Thursday:</span> 11:00 AM - 2:00 PM | 6:00 AM - 10:00 PM </p>
-                                <p><span>Friday:</span> 6:00 PM - 10:00 PM</p>
-                                <p><span>Saturday:</span> 11:00 AM - 2:00 PM | 6:00 AM - 10:00 PM </p>
-                                <p><span>Sunday:</span> 11:00 AM - 2:00 PM</p>
+                        
+                        <div class="contact__item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Opening Hours</h4>
+                                <div class="hours">
+                                    <p><span>Monday - Thursday:</span> 11:00 AM - 2:00 PM | 6:00 PM - 10:00 PM</p>
+                                    <p><span>Friday:</span> 6:00 PM - 10:00 PM</p>
+                                    <p><span>Saturday:</span> 11:00 AM - 2:00 PM | 6:00 PM - 10:00 PM</p>
+                                    <p><span>Sunday:</span> Closed (Emergency appointments available)</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact__form-wrapper">
-                    <form class="contact__form" id="appointment-form">
-                        <h3>Book Your Appointment</h3>
-                        <div class="form-group">
-                            <label for="fullName" class="form-label">Full Name *</label>
-                            <input type="text" id="fullName" name="fullName" class="form-control" required>
-                            <span class="error-message" id="fullName-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" required>
-                            <span class="error-message" id="phone-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                            <span class="error-message" id="email-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="preferredDate" class="form-label">Preferred Date</label>
-                            <input type="date" id="preferredDate" name="preferredDate" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="service" class="form-label">Service Needed</label>
-                            <select id="service" name="service" class="form-control">
-                                <option value="">Select a service</option>
-                                <option value="General Checkup">General Checkup</option>
-                                <option value="Teeth Cleaning">Teeth Cleaning</option>
-                                <option value="Cosmetic Consultation">Cosmetic Consultation</option>
-                                <option value="Emergency Care">Emergency Care</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us about your dental concerns or any questions you have..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--primary btn--full-width">Book Appointment</button>
-                    </form>
+                
+                <!-- Emergency Notice -->
+                <div class="emergency-booking">
+                    <p><strong>⚡ Emergency?</strong> Call <a href="tel:+918999626067">+91 8999626067</a> directly - Available even on Sundays for urgent dental cases</p>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -447,8 +507,8 @@
                 <div class="footer__section">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:8999626067">8999626067</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@muskandental.com">info@muskandental.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+918999626067">+91 8999626067</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:muskandentalclinic4u@gmail.com">muskandentalclinic4u@gmail.com</a></li>
                         <li><i class="fas fa-map-marker-alt"></i> Kausa, Mumbra, Thane</li>
                     </ul>
                 </div>
@@ -461,7 +521,7 @@
                     </div>
                     <div class="emergency-notice">
                         <p><strong>Emergency?</strong></p>
-                        <a href="tel:8999626067" class="btn btn--outline btn--sm">Call 8999626067</a>
+                        <a href="tel:+918999626067" class="btn btn--outline btn--sm">Call +91 8999626067</a>
                     </div>
                 </div>
             </div>
@@ -470,12 +530,11 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </button>
-
     <script src="app.js"></script>
 </body>
 </html>
